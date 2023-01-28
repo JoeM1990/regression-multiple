@@ -1,8 +1,5 @@
-install.packages("tidyverse")
-install.packages("ggplot2")
 library(readxl)
 library(ggplot2)
-
 library(car)
 library(QuantPsyc)
 #panel <- read_excel("~/Downloads/panel.xlsx")
