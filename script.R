@@ -1,3 +1,6 @@
+#Regression multiple
+#By Joe Monkila
+
 library(readxl)
 library(ggplot2)
 library(car)
