@@ -1,5 +1,6 @@
 #Regression multiple
 #By Joe Monkila
+#R
 
 library(readxl)
 library(ggplot2)
