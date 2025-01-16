@@ -1,0 +1,36 @@
+name: Auto Commit with Random Messages
+
+on:
+  schedule:
+    - cron: "*/1 * * * *"
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Configure Git
+      run: |
+        git config user.name "Joe Monkila"
+        git config user.email "jnkiwa25@gmail.com"
+
+    - name: Generate Random Commit Message
+      id: commit_message
+      run: |
+        MESSAGES=("Update docs" "Fix typos" "Improve comments" "Optimize code" "Small adjustments" "Minor refactor" "fixed bugs" "add functionality" "review logic mathematical" "review codes")
+        RANDOM_INDEX=$((RANDOM % ${#MESSAGES[@]}))
+        echo "message=${MESSAGES[$RANDOM_INDEX]}" >> $GITHUB_ENV
+
+    - name: Make Changes
+      run: |
+        # Exemple de modifications. Ajoutez votre logique ici.
+        echo "Auto-update at $(date)" >> autoupdate-log.txt
+
+    - name: Commit and Push Changes
+      run: |
+        git add .
+        git commit -m "$message"
+        git push
