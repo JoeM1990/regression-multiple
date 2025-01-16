@@ -1,4 +1,4 @@
-name: Auto Commit with Random Messages
+name: review codes
 
 on:
   schedule:
