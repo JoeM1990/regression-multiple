@@ -10,7 +10,6 @@ library(QuantPsyc)
 #View(panel)
 
 #donnees=read_excel("~/Downloads/panel.xlsx")
-
 donnees = readxl::read_excel("~/Downloads/panel.xlsx")
 names(donnees)=c("idhous","year","region","refper","hldtyp","nbpers","nbkid","aduk1","aduk2","idispy",
                  "sex","age","edcat","occupa","relarp","iavsy","hldtypnbr","tranch5","tranch10","tranch15",
