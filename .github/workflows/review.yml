@@ -1,4 +1,4 @@
-name: review codes
+name: new functions
 
 on:
   schedule:
@@ -20,7 +20,8 @@ jobs:
     - name: Generate Random Commit Message
       id: commit_message
       run: |
-        MESSAGES=("Update docs" "Fix typos" "Improve comments" "Optimize code" "Small adjustments" "Minor refactor" "fixed bugs" "add functionality" "review logic mathematical" "review codes")
+        MESSAGES=( "Initial commit: Projet démarré avec succès !" "Fix: Correction d’un bug critique dans le module principal." "Add: Ajout de la fonctionnalité de connexion utilisateur." "Update: Amélioration des performances pour le traitement des données." "Refactor: Réorganisation du code pour une meilleure lisibilité." "Docs: Ajout de la documentation pour l’API REST." "Remove: Suppression des fichiers inutilisés." "Test: Ajout de tests unitaires pour la classe X." "Style: Correction des problèmes de formatage et de linting." "Feat: Intégration de la prise en charge multilingue." "Chore: Mise à jour des dépendances." "Bug: Résolution du problème d'affichage sur mobile." "Perf: Optimisation de la requête SQL pour améliorer la vitesse." "Add: Ajout d’un fichier .gitignore."  "Hotfix: Correction d’un problème urgent en production." "Update: Modification du design de la page d’accueil."  "Build: Configuration initiale pour CI/CD." "Feat: Implémentation du mode sombre."  "Revert: Annulation du dernier commit." "Merge: Fusion de la branche feature/xyz dans main." "Fix: Correction des erreurs de compilation." "Docs: Mise à jour du README avec des exemples." "Feat: Ajout d’un gestionnaire d’erreurs global." "Test: Couverture de test augmentée à 90%." "Chore: Nettoyage du fichier de configuration." "Add: Ajout d'une fonction de recherche avancée." "Fix: Résolution d'un problème de compatibilité avec le navigateur." "Update: Ajout de nouvelles traductions pour le site." "Remove: Suppression des dépendances obsolètes." "Refactor: Simplification de la logique dans le composant X." "Style: Mise à jour du thème CSS pour un meilleur rendu." "Perf: Réduction du temps de chargement de la page." "Add: Ajout d’un exemple de données pour les tests." "Fix: Correction d’un crash lié à une requête mal formée." "Build: Mise à jour des scripts de déploiement." "Feat: Ajout d’un tableau de bord pour les administrateurs."  "Docs: Ajout de la section FAQ dans le guide utilisateur."  "Chore: Mise à jour de la version du projet dans package.json."  "Hotfix: Résolution d’une régression après la dernière mise à jour." "Feat: Implémentation de la validation des formulaires.")
+
         RANDOM_INDEX=$((RANDOM % ${#MESSAGES[@]}))
         echo "message=${MESSAGES[$RANDOM_INDEX]}" >> $GITHUB_ENV
 
