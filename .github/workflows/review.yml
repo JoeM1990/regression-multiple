@@ -2,7 +2,7 @@ name: new functions
 
 on:
   schedule:
-    - cron: "*/60 * * * *"
+    - cron: "*/0 * * * *"
 
 jobs:
   auto-commit:
